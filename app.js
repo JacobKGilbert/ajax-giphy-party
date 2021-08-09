@@ -19,6 +19,10 @@ $('#search-form').submit(async function (evt) {
 })
 
 function appendGIF (gif) {
-  html = `<img src="${gif}" alt="gif image">`
+  html = `<img src="${gif}" alt="gif image" class="gif-image">`
   $('.container').append(html)
 }
+
+$('#remove-gifs-button').on('click', function (evt) {
+  $('.gif-image').remove()
+})
